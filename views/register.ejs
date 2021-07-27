@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            box-shadow: 10px 10px 8px 10px #888888;
+            margin-top: 15vh;
+            padding: 20px;
+        }
+        h3{
+            text-align: center;
+        }
+        input{
+            margin: 5px;
+            padding: 5px;
+        }
+        button{
+            padding: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>Register</h3>
+            <form action="/register" method="POST">
+                <label for="name">Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <br>
+                <label for="email">Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="email" name="email" placeholder="Enter your email"
+                required>
+                <br>
+                <label for="password">password:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="password" id="password" name="password"placeholder="enter your password" required><br>
+                <label for="repassword">confirm password:</label>
+                <input type="password" id="repassword" placeholder="Enter your password" required>
+                <br>
+                <label for="number">Number:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="number" name="number" placeholder="Enter your number" required>
+                <br>
+                <button type="submit" id="btn">Register</button>
+            </form>
+            <p>Already have an account? <a href="/login">login</a></p>
+        </div>
+    </div>
+    <!-- <script>
+        const password=document.querySelector('#password');
+        const repassword=document.querySelector('#repassword');
+        const btn=document.querySelector('#btn');
+        btn.addEventListen('click',()=>{
+            if(password.value!==repassword.value)alert('passwords dont match');
+        })
+    </script> -->
+</body>
+</html>
